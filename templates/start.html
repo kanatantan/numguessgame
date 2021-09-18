@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <h3>{{ name }}さん、こんにちは。</h3>
+    <h3>さっそく数当てゲームを始めます。</h3>
+    <h3>数当てゲームとは、無作為に摘出された1から100までの数字を何回目で当てることができるか、というゲームです。</h3>
+    <h3>ヒントを頼りにできるだけ早く正解しましょう。</h3>
+    <h3>では、{{ name }}さん、健闘を祈ります。</h3>
+    <form action="/select" method="POST" style="margin-top: 20px">
+        <input class="btn btn-success" type="submit" value="START">
+    </form>
+    <form action="/" method="GET">
+        <input class="btn btn-outline-success" type="submit" value="最初に戻る">
+    </form>
+</div>
+{% endblock %}

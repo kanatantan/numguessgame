@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <form action="/game" method="POST">
+        <label for="selected" style="font-size: 1.5em">数字を入力してください。:</label>
+        <input type="text" name="selected" autofocus>
+        <input class="btn btn-success" type="submit" value="送信">
+    </form>
+    <form action="/" method="GET">
+        <input class="btn btn-outline-success" type="submit" value="最初に戻る">
+    </form>
+</div>
+{% endblock %}

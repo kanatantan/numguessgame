@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+<div class="wrapper">
+    <h1 style="font-size: 2.5em; margin-bottom: 40px">数当てゲームへようこそ！</h1>
+    <form action="/start" method="POST">
+        <label for="name" style="font-size: 1.5em">名前を入力してください。:</label>
+        <input type="text" name="name" autofocus>
+        <input class="btn btn-success" type="submit" value="送信">
+    </form>
+</div>
+
+{% endblock %}

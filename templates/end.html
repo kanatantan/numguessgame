@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <h1>正解です！</h1>
+    <h2>{{ name }}さん、あなたは {{ counts }}回目 で正解しました。</h2>
+    <h2>遊んでくれてありがとう！</h2>
+    <form action="/" method="GET">
+        <input class="btn btn-outline-success" type="submit" value="最初に戻る">
+    </form>
+</div>
+{% endblock %}

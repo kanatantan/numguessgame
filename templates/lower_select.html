@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <h2>ハズレ～!!</h2>
+    <h2>ヒント：もっと小さい数字です。</h2>
+    <h2>{{ lower_limit_ex }}から{{ upper_limit_ex }}まで絞り込みました。</h2>
+    <h2>次に正解する確率は、{{ probability }} %です</h2>
+    <h2>次は{{ counts }}回目の挑戦です。</h2>
+    <form action="/game" method="POST">
+        <label for="selected" style="font-size: 1.5em">数字を入力してください。:</label>
+        <input type="text" name="selected" autofocus>
+        <input class="btn btn-success" type="submit" value="送信">
+    </form>
+    <form action="/" method="GET">
+        <input class="btn btn-outline-success" type="submit" value="最初に戻る">
+    </form>
+</div>
+{% endblock %}

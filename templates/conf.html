@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <h2>ハズレ～!!</h2>
+    {% if selected - 2 == low %}
+        <h2>ヒント：もっと小さい数字です。</h2>
+    {% endif %}
+    {% if selected + 2 == high %}
+        <h2>ヒント：もっと大きい数字です。</h2>
+    {% endif %}
+    <h2>もう答えはわかりましたね。</h2>
+    <h2>そうです。{{ answer }}です。</h2>
+    <form action="/game" method="POST">
+        <!-- <label for="selected" style="font-size: 1.5em">それでは、{{ answer }}を入力してください。:</label> -->
+        <input type="text" name="selected" value="{{ answer }}" autofocus>
+        <input class="btn btn-success" type="submit" value="送信">
+    </form>
+</div>
+
+{% endblock %}
